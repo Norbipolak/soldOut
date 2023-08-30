@@ -103,4 +103,3 @@ for (const album of bestSellingAlbums) {
     }
     }
 console.log(oldestAlbum.title)
-
