@@ -126,10 +126,31 @@ for (const album of bestSellingAlbums) {
     if (isBothRock === 2)
     console.log('True')
 
-   let iLikeIt = 0;
-    
-for (const like of bestSellingAlbums){
-    iLikeIt = true
-like.iLikeIt += bestSellingAlbums
-console.log(like.iLikeIt)
-}
+
+   // Add an extra album
+
+   let newAlbum =
+   {artist: "Gabriella Cilmi",
+   title: "Lessons to be learned",
+   year: 2008,
+   genres: "pop",
+   sale: 1000000,}
+
+   // bestSellingAlbums.push(newAlbum) 
+
+   bestSellingAlbums[8] = newAlbum
+
+   console.log(bestSellingAlbums) 
+
+   // add an extra key
+   newAlbum["iLike"] = true
+   bestSellingAlbums[0]["iLike"] = true 
+   bestSellingAlbums[1]["iLike"] = true 
+   bestSellingAlbums[2]["iLike"] = true 
+   bestSellingAlbums[3]["iLike"] = true 
+   bestSellingAlbums[4]["iLike"] = true 
+   bestSellingAlbums[5]["iLike"] = true 
+   bestSellingAlbums[6]["iLike"] = true 
+   bestSellingAlbums[7]["iLike"] = true 
+   
+   console.log(bestSellingAlbums)
