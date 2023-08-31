@@ -103,3 +103,31 @@ for (const album of bestSellingAlbums) {
     }
     }
 console.log(oldestAlbum.title)
+
+let albumsofeagles = 0;
+for (const album of bestSellingAlbums) {
+    if (album.artist === "Eagles") {
+        albumsofeagles += album.sale
+    }
+    }
+    console.log(albumsofeagles)
+
+    let isbothrock = 0;
+for (const album of bestSellingAlbums) {
+    if (album.artist === "Eagles") {
+        for (const fajta of album.genres) {
+            if (fajta === "soft rock")
+        isbothrock++
+        }
+    }
+    }
+    if (isbothrock===2)
+    console.log('True')
+
+   let ilikeit = 0;
+    
+for (const like of bestSellingAlbums){
+    ilikeit=true
+like.ilikeit+= bestSellingAlbums
+console.log(like.ilikeit)
+}
