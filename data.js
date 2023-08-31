@@ -104,30 +104,32 @@ for (const album of bestSellingAlbums) {
     }
 console.log(oldestAlbum.title)
 
-let albumsofeagles = 0;
-for (const album of bestSellingAlbums) {
-    if (album.artist === "Eagles") {
-        albumsofeagles += album.sale
-    }
-    }
-    console.log(albumsofeagles)
+let albumsOfEagles = 0;
 
-    let isbothrock = 0;
 for (const album of bestSellingAlbums) {
     if (album.artist === "Eagles") {
-        for (const fajta of album.genres) {
-            if (fajta === "soft rock")
-        isbothrock++
+        albumsOfEagles += album.sale
+    }
+    }
+    console.log(albumsOfEagles)
+
+    let isBothRock = 0;
+
+for (const album of bestSellingAlbums) {
+    if (album.artist === "Eagles") {
+        for (const type of album.genres) {
+            if (type === "soft rock")
+        isBothRock++
         }
     }
     }
-    if (isbothrock===2)
+    if (isBothRock === 2)
     console.log('True')
 
-   let ilikeit = 0;
+   let iLikeIt = 0;
     
 for (const like of bestSellingAlbums){
-    ilikeit=true
-like.ilikeit+= bestSellingAlbums
-console.log(like.ilikeit)
+    iLikeIt = true
+like.iLikeIt += bestSellingAlbums
+console.log(like.iLikeIt)
 }
