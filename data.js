@@ -65,48 +65,50 @@ for (const album of bestSellingAlbums) {
     totalRate += album.sale // rate = rate + variable   -   rate +- variable
 }
 
-const averageRate = totalRate / bestSellingAlbums.length
-console.log(averageRate)
+    const averageRate = totalRate / bestSellingAlbums.length
+    console.log(averageRate)
 
-// Average Age 
+        // Average Age 
 
-let totalYear = 0 
+        let totalYear = 0 
 
-for (const album of bestSellingAlbums) {
+    for (const album of bestSellingAlbums) {
     totalYear += album.year 
 }
 
-const averageYear = totalYear / bestSellingAlbums.length
+    const averageYear = totalYear / bestSellingAlbums.length
 
-let thisYear = 2023
+    let thisYear = 2023
 
-const averageAge = thisYear - averageYear
+    const averageAge = thisYear - averageYear
 
-console.log(averageAge)
+    console.log(averageAge)
 
-// oldest/newest album
+    // oldest/newest album
 
-let newestAlbum = bestSellingAlbums[0]
+    let newestAlbum = bestSellingAlbums[0]
 
-for (const album of bestSellingAlbums) {
+    for (const album of bestSellingAlbums) {
     if (album.year > newestAlbum.year) {
         newestAlbum = album
     }
     }
-console.log(newestAlbum.title)
+    console.log(newestAlbum.title)
 
-let oldestAlbum = bestSellingAlbums[0]
+    let oldestAlbum = bestSellingAlbums[0]
 
-for (const album of bestSellingAlbums) {
+    for (const album of bestSellingAlbums) {
     if (album.year < oldestAlbum.year) {
         oldestAlbum = album
     }
     }
-console.log(oldestAlbum.title)
+    console.log(oldestAlbum.title)
 
-let albumsOfEagles = 0;
+    // albums of Eagles
 
-for (const album of bestSellingAlbums) {
+    let albumsOfEagles = 0;
+
+    for (const album of bestSellingAlbums) {
     if (album.artist === "Eagles") {
         albumsOfEagles += album.sale
     }
@@ -115,7 +117,7 @@ for (const album of bestSellingAlbums) {
 
     let isBothRock = 0;
 
-for (const album of bestSellingAlbums) {
+    for (const album of bestSellingAlbums) {
     if (album.artist === "Eagles") {
         for (const type of album.genres) {
             if (type === "soft rock")
@@ -126,31 +128,3 @@ for (const album of bestSellingAlbums) {
     if (isBothRock === 2)
     console.log('True')
 
-
-   // Add an extra album
-
-   let newAlbum =
-   {artist: "Gabriella Cilmi",
-   title: "Lessons to be learned",
-   year: 2008,
-   genres: "pop",
-   sale: 1000000,}
-
-   // bestSellingAlbums.push(newAlbum) 
-
-   bestSellingAlbums[8] = newAlbum
-
-   console.log(bestSellingAlbums) 
-
-   // add an extra key
-   newAlbum["iLike"] = true
-   bestSellingAlbums[0]["iLike"] = true 
-   bestSellingAlbums[1]["iLike"] = true 
-   bestSellingAlbums[2]["iLike"] = true 
-   bestSellingAlbums[3]["iLike"] = true 
-   bestSellingAlbums[4]["iLike"] = true 
-   bestSellingAlbums[5]["iLike"] = true 
-   bestSellingAlbums[6]["iLike"] = true 
-   bestSellingAlbums[7]["iLike"] = true 
-   
-   console.log(bestSellingAlbums)
