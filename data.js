@@ -128,3 +128,11 @@ for (const album of bestSellingAlbums) {
     if (isBothRock === 2)
     console.log('True')
 
+    for (const album of bestSellingAlbums){
+        if (album.artist === "Michael Jackson" || album.artist === "Whitney Houston"){
+            album.iLikeIt = true 
+            }else{
+                album.iLikeIt = false
+            }
+        }
+    console.log(bestSellingAlbums)
