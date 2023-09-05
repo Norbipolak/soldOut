@@ -128,6 +128,26 @@ for (const album of bestSellingAlbums) {
     if (isBothRock === 2)
     console.log('True')
 
+    // solution in class
+
+    eaglesAlbumsCount = 0
+    softRockEaglesAlbumsCount = 0
+
+    for (const album of bestSellingAlbums){
+        if (album.artist === "Eagles") {
+            eaglesAlbumsCount += 1
+            for (const genre of album.genres){
+                if (genre === "soft rock"){
+                    softRockEaglesAlbumsCount += 1
+                }
+            }
+    
+        }
+    }
+    console.log(eaglesAlbumsCount)
+
+    // add true what we like
+
     for (const album of bestSellingAlbums){
         if (album.artist === "Michael Jackson" || album.artist === "Whitney Houston"){
             album.iLikeIt = true 
