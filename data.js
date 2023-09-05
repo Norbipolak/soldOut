@@ -144,7 +144,7 @@ for (const album of bestSellingAlbums) {
     
         }
     }
-    console.log(eaglesAlbumsCount)
+     //console.log(eaglesAlbumsCount)
 
     // add true what we like
 
