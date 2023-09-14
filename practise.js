@@ -131,14 +131,80 @@
 //     }
 // }
 
-function sayHello(player) {
-    return 'hello ' + player
+// function sayHello(player) {
+//     return 'hello ' + player
+// }
+
+// const helloJoe = sayHello("Joe")
+// const helloJack = sayHello("Jack")
+// const helloJane = sayHello("Jane")
+
+// console.log(helloJoe)
+// console.log(helloJack)
+// console.log(helloJane)
+
+
+let name = "Mónika"
+console.log(name)
+
+name = "Norbert"
+console.log(name)
+
+console.log("Hello!")
+
+function averageAge(favorite, thisYear){
+    let averageAge = 0
+    for (const something of favorite){
+    averageAge += thisYear - something.thisYear
+    }
+return averageAge / favorite.length
 }
 
-const helloJoe = sayHello("Joe")
-const helloJack = sayHello("Jack")
-const helloJane = sayHello("Jane")
+averageAge(bestsellingAlbums, 2023)
 
-console.log(helloJoe)
-console.log(helloJack)
-console.log(helloJane)
+function oldestOrNewest(favorite, isTrue){
+let oldestYear = favorite[0].year
+let oldestName = ""
+let newestYear = favorite[0].year
+let newestName = ""
+
+for (const something of favorite){
+if (oldestYear > favorite.year){
+oldestYear = favorite.year
+oldestName = favorite.name
+}
+if (newestYear < favorite.year){
+newestYear = favorite.year
+newestName = favorite.name
+}
+}
+
+if (isTrue){
+return oldestName
+}else{
+return newestName
+}
+}
+
+oldestOrNewest(bestsellingAlbums, true)
+
+function average (favorite, string){
+if (favorite[0].[string] !== undefined) {
+    let averageData = 0
+    for (const something of favorite){
+        averageData += something.[string]
+    }
+    return averageData / favorite.length
+} else {
+    return null
+}
+}
+average(bestsellingAlbums, "rate")
+
+const commonsomething = []
+
+for (const data of Biodata){
+    let something = {}
+something["id"] = data.id
+}
+commonsomething.push(something)
