@@ -1,147 +1,147 @@
-// // 1. task
+// 1. task
 
-// function add(a, b) {
-//     return a + b
-// }
+function add(a, b) {
+    return a + b
+}
 
-// let result = add(2, 5)
-// let anotherResult = add(6, 7)
+let result = add(2, 5)
+let anotherResult = add(6, 7)
 
-// console.log(result)
-// console.log(anotherResult)
+console.log(result)
+console.log(anotherResult)
 
-// // 2. task 
+// 2. task 
 
-// function getAvailableBooks(books) {
-//     let availableBooksTitles = ""
-//     for (const book of books) {
-//         if (book.stock > 0) {
-//             availableBooksTitles += `${book.title}`
-//         }
-//     }
-//     return `The following books are available: ${availableBooksTitles}`
-// }
+function getAvailableBooks(books) {
+    let availableBooksTitles = ""
+    for (const book of books) {
+        if (book.stock > 0) {
+            availableBooksTitles += `${book.title}`
+        }
+    }
+    return `The following books are available: ${availableBooksTitles}`
+}
 
-// const books = [
-//     { title: "The great Gatsby", author: "F. Scott Fitzgerald", stock: 0 },
-//     { title: "To kill a mickingbird", author: "Harper Lee", stock: 5 },
-//     { title: "1984", author: "George Orwell", stock: 3 },
-//     { title: "Pride and Prejudice", author: "Jane Austen", stock: 2 }
-// ]
+const books = [
+    { title: "The great Gatsby", author: "F. Scott Fitzgerald", stock: 0 },
+    { title: "To kill a mickingbird", author: "Harper Lee", stock: 5 },
+    { title: "1984", author: "George Orwell", stock: 3 },
+    { title: "Pride and Prejudice", author: "Jane Austen", stock: 2 }
+]
 
-// const availableBooksMessage = getAvailableBooks(books)
+const availableBooksMessage = getAvailableBooks(books)
 
-// console.log(availableBooksMessage)
+console.log(availableBooksMessage)
 
-// // functions as arguments 
+// functions as arguments 
 
-// function greet(name, callback) {
-//     console.log(`Ciao, ${name}!`)
-//     callback()
-// }
+function greet(name, callback) {
+    console.log(`Ciao, ${name}!`)
+    callback()
+}
 
-// function sayGoodBye() {
-//     console.log("Goodbye!")
-// }
+function sayGoodBye() {
+    console.log("Goodbye!")
+}
 
-// greet("David", sayGoodBye)
+greet("David", sayGoodBye)
 
-// // same location check, other teams solution
+// same location check, other teams solution
 
-// function locationCheck(data) {
-//     let location = {}
+function locationCheck(data) {
+    let location = {}
 
-//     for (let i = 0; i < data.members.length; i++) {
-//         if (location[data.members[i].location.city]) {
-//             location[data.members[i].location.city].push(data.members[i].name)
-//         } else {
-//             location[data.members[i].location.city] = [data.members[i].name]
-//         }
-//     }
-//     return location
-// }
+    for (let i = 0; i < data.members.length; i++) {
+        if (location[data.members[i].location.city]) {
+            location[data.members[i].location.city].push(data.members[i].name)
+        } else {
+            location[data.members[i].location.city] = [data.members[i].name]
+        }
+    }
+    return location
+}
 
-// // remove keys with delete function
+// remove keys with delete function
 
-// function removeKeys(data) {
-//     for (let i = 0; i < data.members.length; i++) {
-//         for (let j = 0; j = data.members[i].favorites.favMovies.length; j++) {
-//             delete data.members[i].favorites.favMovies[j].description
-//         }
-//         for (let j = 0; j = data.members[i].favorites.favBooks.length; j++) {
-//             delete data.members[i].favorites.favBooks[j].isNewerThan2000
-//             delete data.members[i].favorites.favBooks[j].age
-//         }
-//     }
-// }
+function removeKeys(data) {
+    for (let i = 0; i < data.members.length; i++) {
+        for (let j = 0; j = data.members[i].favorites.favMovies.length; j++) {
+            delete data.members[i].favorites.favMovies[j].description
+        }
+        for (let j = 0; j = data.members[i].favorites.favBooks.length; j++) {
+            delete data.members[i].favorites.favBooks[j].isNewerThan2000
+            delete data.members[i].favorites.favBooks[j].age
+        }
+    }
+}
 
-// // Average age with function
+// Average age with function
 
-// let averageAge = functions.age(ourTeam)
+let averageAge = functions.age(ourTeam)
 
-// function averageAge(ourTeam) {
-//     let averageAge = 0
-//     let thisYear = 2023
-//     for (const member of ourTeam.members) {
-//         averageAge += thisYear - member.birthday.year
-//     }
-//     return averageAge /= ourTeam.members.length
-// }
+function averageAge(ourTeam) {
+    let averageAge = 0
+    let thisYear = 2023
+    for (const member of ourTeam.members) {
+        averageAge += thisYear - member.birthday.year
+    }
+    return averageAge /= ourTeam.members.length
+}
 
-// // Average Coding level
+// Average Coding level
 
-// let averageCodingLevel = functions.CodingLevel(ourTeam)
+let averageCodingLevel = functions.CodingLevel(ourTeam)
 
-// function averageCodingLevel(ourTeam) {
-//     let averageCodingLevel = 0
-//     for (const member of ourTeam.members) {
-//         averageCodingLevel += member.codingLevel.level
-//     }
-//     return averageCodingLevel /= ourTeam.members.length
-// }
+function averageCodingLevel(ourTeam) {
+    let averageCodingLevel = 0
+    for (const member of ourTeam.members) {
+        averageCodingLevel += member.codingLevel.level
+    }
+    return averageCodingLevel /= ourTeam.members.length
+}
 
-// // youngest and oldest member
+// youngest and oldest member
 
-// youngestMemberYear = ourTeam.members[0].birthday.year
-// youngestMember = ourTeam.members[0].name
-// oldestMemberYear = ourTeam.members[0].birthday.year
-// oldestMember = ourTeam.members[0].name
+youngestMemberYear = ourTeam.members[0].birthday.year
+youngestMember = ourTeam.members[0].name
+oldestMemberYear = ourTeam.members[0].birthday.year
+oldestMember = ourTeam.members[0].name
 
-// for (const member of ourTeam.members)
-// if (youngestMemberYear < member.birthday.year) {
-//     youngestMemberYear = member.birthday.year
-//     youngestMember = member.name
-// }
-// if (oldestMemberYear < member.birthday.year) {
-//     oldestMemberYear = member.birthday.year
-//     oldestMember = member.name
-// }
+for (const member of ourTeam.members)
+if (youngestMemberYear < member.birthday.year) {
+    youngestMemberYear = member.birthday.year
+    youngestMember = member.name
+}
+if (oldestMemberYear < member.birthday.year) {
+    oldestMemberYear = member.birthday.year
+    oldestMember = member.name
+}
 
-// // same genres
+// same genres
 
-// let commonGenres = {}
+let commonGenres = {}
 
-// for (const member of ourTeam.members) {
-//     for (const song of member.favorites.favSongs) {
-//         for (cosnt genre of song.genres) {
-//             if (commonGenres[genre]) += 1
-//         } else { 
-//             commonGenres[genre] = 1
-//         }
-//     }
-// }
+for (const member of ourTeam.members) {
+    for (const song of member.favorites.favSongs) {
+        for (cosnt genre of song.genres) {
+            if (commonGenres[genre]) += 1
+        } else { 
+            commonGenres[genre] = 1
+        }
+    }
+}
 
-// function sayHello(player) {
-//     return 'hello ' + player
-// }
+function sayHello(player) {
+    return 'hello ' + player
+}
 
-// const helloJoe = sayHello("Joe")
-// const helloJack = sayHello("Jack")
-// const helloJane = sayHello("Jane")
+const helloJoe = sayHello("Joe")
+const helloJack = sayHello("Jack")
+const helloJane = sayHello("Jane")
 
-// console.log(helloJoe)
-// console.log(helloJack)
-// console.log(helloJane)
+console.log(helloJoe)
+console.log(helloJack)
+console.log(helloJane)
 
 
 let name = "Mónika"
@@ -208,3 +208,10 @@ for (const data of Biodata){
 something["id"] = data.id
 }
 commonsomething.push(something)
+
+function hello(player){
+    return "hello" + player
+
+    const player1 = "Joe"
+    const player2 = "Joe"
+}
